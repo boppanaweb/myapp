@@ -1,0 +1,53 @@
+<h2>Add a New Question</h2>
+
+<form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6">
+        <label class="new-question-field" for="content">Your Question:</label>
+      </div>
+
+      <div class="col-xs-6">
+        {{input class="new-question-field" value=content id="content"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6">
+        <label class="new-question-field" for="author">Name:</label>
+      </div>
+
+      <div class="col-xs-6">
+        {{input class="new-question-field" value=author id="author"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6">
+        <label class="new-question-field" for="image">Avatar URL:</label>
+      </div>
+
+      <div class="col-xs-6">
+        {{input class="new-question-field" value=image id="image"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6">
+        <label class="new-question-field" for="note">Additional Notes:</label>
+      </div>
+
+      <div class="col-xs-6">
+        {{input class="new-question-field" value=note id="note"}}
+      </div>
+    </div>
+  </div>
+
+  <button class="question-button" {{action 'saveQuestion'}}>Post Question</button>
+</form>

@@ -1,0 +1,132 @@
+This is the {{name}}. <br>
+I make the SPA app work :-)
+{{log model}}
+<table width="100%">
+
+
+<tr>
+ <th> Company NAme
+</th>
+<th>
+	Head Quarters
+</th>
+<th>
+	Revenue
+</th>
+</tr>
+{{#each model as |item|}}
+<tr>
+
+<td>
+	{{item.name}}
+
+
+	</td>
+	<td>
+		{{item.headquarters}}
+
+	</td>
+	<td>
+		{{item.revenue}}
+
+	</td>
+
+
+
+</tr>
+ {{/each}}	
+
+
+</table>
+   
+
+<button {{action 'chnageEidt'}}>toogle</button>
+<ul>
+	<li>
+{{#link-to 'about'}}About{{/link-to}}</li>
+<li>
+{{#link-to 'products'}}Product{{/link-to}}<br/>
+{{#link-to 'products.index'}}Product > new{{/link-to}}<br/>
+{{#link-to 'commits'}}commits{{/link-to}}<br/>
+
+{{#link-to "books.index"}}  Fetch All the Books From Server{{/link-to}}  <br/>
+        
+  
+
+{{#link-to "books.new"}}
+            Create a new book{{/link-to}}
+  
+
+</li>
+</ul>
+{{profile-card-static}}
+{{profile-card name="Ravi Kumar" avatar="https://randomuser.me/api/portraits/thumb/lego/1.jpg" bio="Great artist"}}
+
+{{profile-card name=model.name avatar=model.avatar bio=model.bio}}
+
+ <p>{{my-btn}} </p>
+
+ <b>Info:</b> <span id="info"> {{title}}</span>
+
+
+<h4> Index view: Bubbling actions through components</h4>
+
+{{pressCount}} Button presses
+ {{button-wrapper action="buttonClick"}}
+
+ {{comp-test}}
+
+ -----------------------------Quiz----------------------------
+ {{log model}}
+ <ul>
+  {{#each model.quiz as |list|}}
+  <li>
+ {{question-list question=list.question avatar=list.avatar asked=list.asked}}
+ </li>
+ {{/each}}
+</ul>
+<hr/>
+<ul>
+  {{#each model.formData as |list|}}
+  <li>
+ {{question-list question=list.question avatar=list.avatar asked=list.asked}}
+ </li>
+ {{/each}}
+</ul>
+<div style="display:block; width:100%; border:1px solid #000">
+
+<h1>Add a new question </h1>
+
+
+Your question:<br>
+{{input value=question}}
+<br>
+
+Name:<br>
+{{input value=asked}}
+<br>
+
+Avatar:<br>
+{{input value=avatar}}
+<br>
+
+Notes:<br>
+{{input value=comment}}
+
+
+<button {{action 'postQuestion'}}>Submit</button>
+
+
+
+
+</div>
+------------------------------------------
+<div class="row">
+  {{#each model as |question|}}
+    {{question-tile question=question}}
+  {{/each}}
+</div>
+
+<div class="new-question-box">
+  {{new-question saveQuestion="saveQuestion"}}
+</div>

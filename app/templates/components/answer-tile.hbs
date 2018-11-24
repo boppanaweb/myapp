@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-4">
+    <img src={{answer.image}} class="answer-avatar">
+    <br>
+  </div>
+  <div class="col-xs-8">
+    <span class="answer-content-text">"{{answer.content}}"</span>
+    {{update-answer answer=answer updateAnswer="updateAnswer"}}
+    <button class="delete-answer" {{action 'deleteAnswer' answer}}>
+        Delete Answer</button>
+  </div>
+</div>

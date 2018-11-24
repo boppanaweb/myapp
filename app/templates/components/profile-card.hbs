@@ -1,0 +1,18 @@
+<style>
+    .card{ border: 1px dotted red ;
+             width: 40% ;
+
+         }
+
+</style>
+
+<div class="card">
+    <img class="card-profile-picture" src="{{avatar}}">
+    <div class="card-actions">
+    <button class="follow-button" {{action "follow"}}>Follow</button>
+  </div>
+  <div class="card-content">
+    <h3>{{name}}</h3>
+    <p>{{bio}}</p>
+  </div>
+</div>

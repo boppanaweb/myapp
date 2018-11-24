@@ -1,0 +1,44 @@
+{{#if updateAnswerForm}}
+<h2>Update This Answer:</h2>
+
+<form>
+  <div class="form-group">
+    <div class="row">
+      <label class="new-question-field" for="image">Choose Your Avatar:</label>
+
+      <div class="col-xs-3">
+        <img src="http://i.imgur.com/N14lLz7.jpg" {{action 'pickFrisk'}} 
+             class="avatar-choice" id="pickFrisk">
+      </div>
+
+      <div class="col-xs-3">
+        <img src="http://i.imgur.com/bcParR1.jpg" {{action 'pickSans'}} 
+            class="avatar-choice" id="pickSans">
+      </div>
+
+      <div class="col-xs-3">
+        <img src="http://i.imgur.com/KOKa2ij.jpg" {{action 'pickPapyrus'}} 
+            class="avatar-choice" id="pickPapyrus">
+      </div>
+
+      <div class="col-xs-3">
+        <img src="http://i.imgur.com/HG1ELlA.jpg" {{action 'pickGaster'}} 
+              class="avatar-choice" id="pickGaster">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+        <label class="new-question-field" for="content">Answer:</label>
+        <br>
+        {{textarea class="new-question-body" value=content id="updateContent" 
+            placeholder=answer.message}}
+    </div>
+  </div>
+
+  <button class="update-answer" {{action 'updateAnswer' answer}}>Save Changes</button>
+</form>
+{{else}}
+  <button class="update-answer" {{action 'updateAnswerForm'}}>Update Answer</button>
+{{/if}}

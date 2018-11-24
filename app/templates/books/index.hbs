@@ -1,0 +1,10 @@
+List Of Books Fetched:
+<ul>
+{{#each model as  |book|}}
+{{log book}}
+    <li>
+        {{#link-to 'books.book' book}} 
+        {{{book.title}}}{{/link-to}}
+    </li>
+{{/each}}
+</ul>
