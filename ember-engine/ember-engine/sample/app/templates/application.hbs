@@ -1,0 +1,16 @@
+{{!-- The following component displays Ember's default welcome message. --}}
+{{welcome-page}}
+{{!-- Feel free to remove this! --}}
+<h2 id="title">Ember-Engines</h2>
+
+<section>
+    {{#link-to "blog"}}Blog{{/link-to}}
+    {{outlet}}
+
+</section>
+
+<hr />
+
+<section>
+   {{mount "ember-chat-engine"}}   
+</section>

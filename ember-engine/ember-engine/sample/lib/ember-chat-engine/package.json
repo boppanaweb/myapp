@@ -1,0 +1,10 @@
+{
+  "name": "ember-chat-engine",
+  "keywords": [
+    "ember-addon"
+  ],
+  "dependencies": {
+    "ember-cli-babel": "^6.0.0",
+    "ember-cli-htmlbars": "*"
+  }
+}
