@@ -1,6 +1,8 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+	appName:'test',
+	data:2,
 	  name: "Ember Controller",
 	  edit:true,
 	   pressCount: 0,

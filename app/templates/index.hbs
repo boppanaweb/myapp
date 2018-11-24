@@ -130,3 +130,23 @@ Notes:<br>
 <div class="new-question-box">
   {{new-question saveQuestion="saveQuestion"}}
 </div>
+
+---------------------------------------------
+<h3>hbs</h3>
+<div>
+  <p>appName: {{input type="text" value=appName}}</p>
+  <p>Triggers: didUpdateAttrs, didReceiveAttrs, willUpdate, willRender, 
+      didUpdate, didRender</p>
+</div>
+
+<div>
+  <p>data: {{input type="text" value=data}}</p>
+  <p>Triggers: willUpdate, willRender, didUpdate, didRender</p>
+</div>
+
+
+<hr>
+
+{{life-cyc name=appName data=data}}
+
+
